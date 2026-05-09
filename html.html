@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Veloura</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header>
+  <h1>VELOURA</h1>
+  <nav>
+    <button onclick="showPage('home')">Home</button>
+    <button onclick="showPage('shop')">Shop</button>
+    <button onclick="showPage('cart')">Cart (<span id="cart-count">0</span>)</button>
+  </nav>
+</header>
+
+<!-- HOME -->
+<section id="home" class="page active">
+  <div class="hero">
+    <h2>Luxury Redefined</h2>
+    <p>Minimal. Premium. Timeless.</p>
+    <button onclick="showPage('shop')">Explore Collection</button>
+  </div>
+</section>
+
+<!-- SHOP -->
+<section id="shop" class="page">
+  <h2>Shop</h2>
+
+  <div class="filters">
+    <button onclick="filterProducts('all')">All</button>
+    <button onclick="filterProducts('men')">Men</button>
+    <button onclick="filterProducts('women')">Women</button>
+    <button onclick="filterProducts('unisex')">Unisex</button>
+  </div>
+
+  <div id="product-list" class="products"></div>
+</section>
+
+<!-- PRODUCT DETAIL -->
+<section id="product-detail" class="page">
+  <button onclick="showPage('shop')">← Back</button>
+  <div id="detail-container"></div>
+</section>
+
+<!-- CART -->
+<section id="cart" class="page">
+  <h2>Your Cart</h2>
+  <div id="cart-items"></div>
+  <h3>Total: ₹<span id="total">0</span></h3>
+</section>
+
+<script src="script.js"></script>
+</body>
+</html>
